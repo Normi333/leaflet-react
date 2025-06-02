@@ -1,0 +1,13 @@
+.gis-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: beige;
+  margin: 0;
+  padding: 0;
+}
+
+

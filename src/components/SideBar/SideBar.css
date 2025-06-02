@@ -1,0 +1,18 @@
+.sidebar {
+  height: 100%;
+  width: 250px;
+  background: #2f4050;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+  color: aliceblue;
+  display: flex;
+}
+
+.checkbox-text {
+  color: aliceblue;
+}

@@ -1,0 +1,49 @@
+{
+  "id": "248e54c6-f113-4bd3-8083-a5d4a9eb5f79",
+  "title": "Nepal Watercourses - Rivers",
+  "name": "nepal-watercourses-rivers",
+  "notes": "River data for Nepal.",
+  "dataset_source": "Survey Department, Nepal",
+  "organization": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+  "dataset_date": "[2001-01-01T00:00:00 TO 2001-01-01T23:59:59]",
+  "last_modified": "2015-11-24T23:50:11.984305",
+  "data_update_frequency": "Never",
+  "groups": ["Nepal", "Nepal Earthquake"],
+  "license_title": "Other",
+  "methodology": "Other",
+  "methodology_other": "This data has been prepared by merging sheet-wise individual layers available from Survey Department, Nepal. The topographic maps used to create this dataset are of 1:25,000 scale at Terai and Mid-Hills, and 1:50,000 scale at Upper Mountains and Himalayan range.",
+  "caveats": null,
+  "tags": ["earthquake-tsunami", "geodata", "hydrology", "rivers"],
+  "resources": [
+    {
+      "created": "2015-04-26T07:59:35.865858",
+      "description": "Line representation of smaller tributary watercourses in Nepal.  Should be used in conjunction with the associated polygon file which covers large rivers and water bodies.  180MB",
+      "format": "SHP",
+      "download_url": "https://data.humdata.org/dataset/248e54c6-f113-4bd3-8083-a5d4a9eb5f79/resource/c49ef799-201f-45a0-a8ee-f9c35bdafa01/download/npl-watcrsl-hydro-25k-50k-sdn-wgs84-shp.zip",
+      "id": "c49ef799-201f-45a0-a8ee-f9c35bdafa01",
+      "last_modified": "2015-11-24T23:50:11.984305",
+      "metadata_modified": "2025-02-25T18:29:21.269285",
+      "microdata": false,
+      "dataset_id": "248e54c6-f113-4bd3-8083-a5d4a9eb5f79",
+      "resource_type": "file.upload",
+      "name": "npl_watcrsl_hydro_25K_50K_sdn_wgs84.shp.zip",
+      "mimetype": null,
+      "size": "175.5M"
+    },
+    {
+      "created": "2015-04-26T09:28:54.660825",
+      "description": "Polygon representation of water bodies in Nepal.  67MB",
+      "format": "SHP",
+      "download_url": "https://data.humdata.org/dataset/248e54c6-f113-4bd3-8083-a5d4a9eb5f79/resource/38765f7b-694c-4efa-b0b3-3982ce997eda/download/npl-watcrsa-hydro-25k-50k-sdn-wgs84-shp.zip",
+      "id": "38765f7b-694c-4efa-b0b3-3982ce997eda",
+      "last_modified": "2015-11-24T23:50:11.984305",
+      "metadata_modified": "2025-02-25T18:29:22.008777",
+      "microdata": false,
+      "dataset_id": "248e54c6-f113-4bd3-8083-a5d4a9eb5f79",
+      "resource_type": "file.upload",
+      "name": "npl_watcrsa_hydro_25K_50K_sdn_wgs84.shp.zip",
+      "mimetype": null,
+      "size": "62.3M"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mahendra Highway",
+        "type": "primary",
+        "speed_limit": 50,
+        "access": "Public",
+        "condition": "good"
+      },
+      "geometry": {
+        "coordinates": [
+          [87.96636930681626, 26.638866272007874],
+          [88.01339815435477, 26.64928279121787]
+        ],
+        "type": "LineString"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madhya Pahadi Lokmarga",
+        "type": "highway",
+        "speed_limit": 40,
+        "access": "Public",
+        "condition ": "good"
+      },
+      "geometry": {
+        "coordinates": [
+          [87.78114925394647, 27.188371190018614],
+          [87.66360563721804, 27.113682619504004]
+        ],
+        "type": "LineString"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Everest Trail",
+        "type": "trekking",
+        "speed_limit": "null",
+        "access": "Public",
+        "conditions": "average"
+      },
+      "geometry": {
+        "coordinates": [
+          [86.6912894324019, 28.108876900847477],
+          [86.87359769302299, 27.667485282751827],
+          [86.49810575787404, 27.339347040990774]
+        ],
+        "type": "LineString"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Triyuga Highway",
+        "type": "highway",
+        "speed_limit": 40,
+        "access": "Public",
+        "condition ": "good"
+      },
+      "geometry": {
+        "coordinates": [
+          [86.17823449343427, 27.120252646166165],
+          [86.60228467942409, 26.877932713331774],
+          [87.07817863132499, 26.914227604080736]
+        ],
+        "type": "LineString"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Makalu Barun National Park",
+        "established_date": 1992,
+        "Activities": "Trekking, Mountainerring",
+        "park_headquarter": "Seduwa"
+      },
+      "geometry": {
+        "coordinates": [87.06248469814017, 27.74025374533285],
+        "type": "Point"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sagarmatha National Park",
+        "established_date": 1979,
+        "Activities": "Trekking, Mountaineering",
+        "park_headquarter": "Mendalphu, Namche Bazaar"
+      },
+      "geometry": {
+        "coordinates": [86.72056107199018, 27.929902418304962],
+        "type": "Point"
+      },
+      "id": 5
+    }
+  ]
+}
