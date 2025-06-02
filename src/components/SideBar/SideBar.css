@@ -1,7 +1,7 @@
 .sidebar {
   height: 100%;
   width: 250px;
-  background: #2f4050;
+  background: hsl(209, 26%, 25%);
   padding: 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;

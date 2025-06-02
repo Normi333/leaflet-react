@@ -9,7 +9,8 @@ import {
 import "leaflet/dist/leaflet.css";
 import "./map.css";
 import features from "../../data/province1.json";
-import testData from "../../data/test-data-geojson.json";
+import pointData from "../../data/point-test.json";
+import roadData from "../../data/test-line.json";
 
 function Map() {
   const position = [27.262638, 87.268971];
@@ -21,7 +22,7 @@ function Map() {
     color: "black",
     fillOpacity: 0,
   };
-  const testDataStyle = {
+  const roadStyle = {
     weight: 2,
     color: "orange",
   };
@@ -36,34 +37,24 @@ function Map() {
       District ID: ${districtid}
     `);
   };
+  const onEachRoad = (roadData, layer) => {
+    const { name, type, speed_limit, access, condition } = roadData.properties;
+    layer.bindPopup(`
+      Name: ${name}<br/>
+      Type: ${type}<br/>
+      Speed Limit: ${speed_limit}<br/>
+      Access: ${access}<br/>
+      Condition: ${condition}
+    `);
+  };
 
-  const onEachPointer = (feature, layer) => {
-    const props = feature.properties;
-    if (props.park_headquarter && feature.geometry.type === "Point") {
-      layer.bindPopup(`
-      <strong>Park</strong><br/>
-      Name: ${props.name}<br/>
-      Established: ${props.established_date}<br/>
-      Activities: ${props.Activities}<br/>
-      HQ: ${props.park_headquarter}
+  const onEachPointer = (pointData, layer) => {
+    const { name, established_date, activities } = pointData.properties;
+    layer.bindPopup(`
+      Name: ${name}<br/>
+      Established Date: ${established_date}<br/>
+      Activities: ${activities}
     `);
-    } else if (
-      feature.geometry.type === "LineString" &&
-      (props.type || props.speed_limit || props.condition)
-    ) {
-      layer.bindPopup(`
-      <strong>Road</strong><br/>
-      Name: ${props.name || "Unnamed"}<br/>
-      Type: ${props.type || "N/A"}<br/>
-      Speed Limit: ${props.speed_limit || "N/A"} km/h<br/>
-      Access: ${props.access || "N/A"}<br/>
-      Condition: ${
-        props.condition || props["condition "] || props.conditions || "N/A"
-      }
-    `);
-    } else {
-      layer.bindPopup("<strong>Unknown Feature</strong>");
-    }
   };
 
   // useEffect(() => {
@@ -104,12 +95,8 @@ function Map() {
           style={featureStyle}
           onEachFeature={onEachFeature}
         />
-
-        <GeoJSON
-          data={testData}
-          style={testDataStyle}
-          onEachFeature={onEachPointer}
-        />
+        <GeoJSON data={pointData} onEachFeature={onEachPointer} />
+        <GeoJSON data={roadData} style={roadStyle} onEachFeature={onEachRoad} />
       </MapContainer>
     </div>
   );

@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mahendra Highway",
+        "type": "primary",
+        "speed_limit": 50,
+        "access": "Public",
+        "condition": "good"
+      },
+      "geometry": {
+        "coordinates": [
+          [87.96636930681626, 26.638866272007874],
+          [88.01339815435477, 26.64928279121787]
+        ],
+        "type": "LineString"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madhya Pahadi Lokmarga",
+        "type": "highway",
+        "speed_limit": 40,
+        "access": "Public",
+        "condition ": "good"
+      },
+      "geometry": {
+        "coordinates": [
+          [87.78114925394647, 27.188371190018614],
+          [87.66360563721804, 27.113682619504004]
+        ],
+        "type": "LineString"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Everest Trail",
+        "type": "trekking",
+        "speed_limit": "null",
+        "access": "Public",
+        "conditions": "average"
+      },
+      "geometry": {
+        "coordinates": [
+          [86.6912894324019, 28.108876900847477],
+          [86.87359769302299, 27.667485282751827],
+          [86.49810575787404, 27.339347040990774]
+        ],
+        "type": "LineString"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "xyz Highway",
+        "type": "Highway",
+        "speed_limit": "40",
+        "access": "Public",
+        "conditions": "average"
+      },
+      "geometry": {
+        "coordinates": [
+          [87.20035333396169, 27.1206122277612],
+          [86.81118836234765, 27.083637161704942],
+          [87.18900377599294, 27.434473950275546],
+          [87.704711510501, 27.52123551738387]
+        ],
+        "type": "LineString"
+      },
+      "id": 3
+    }
+  ]
+}
