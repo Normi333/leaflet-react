@@ -4,15 +4,49 @@
   background: #2f4050;
   padding: 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
-.sidebar h3 {
+.sidebar h3,
+.sidebar li.menu-title {
   margin: 1rem 0 0.5rem;
   font-size: 1rem;
   color: aliceblue;
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.checkbox-text {
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 0.5rem 0;
   color: aliceblue;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* light border */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar input[type="checkbox"],
+.sidebar input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.menu-section {
+  margin-bottom: 1.5rem;
+}
+
+.menu-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #9fb3c8;
+  border-bottom: 1px solid #3c4a5a;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
