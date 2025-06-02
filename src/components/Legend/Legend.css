@@ -2,18 +2,50 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: white;
-  border: 2px solid #ccc;
+  background: #2f4050;
+  border: 2px solid #3c4a5a;
   padding: 10px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 6px;
   z-index: 1000;
+  color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.legend-box strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #9fb3c8;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
 }
 
 .legend-color {
-  display: inline-block;
   width: 20px;
   height: 10px;
-  background: black;
-  margin-right: 5px;
+  margin-right: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-color.district {
+  background-color: #000000;
+}
+
+.legend-color.roads {
+  background-color: #ffc107;
+}
+
+.legend-color.sagarmatha {
+  background-color: #2db2ff;
+}
+
+.legend-color.makalu {
+  background-color: #2db2ff;
 }
