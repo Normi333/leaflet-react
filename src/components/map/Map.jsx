@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -12,16 +11,15 @@ import features from "../../data/province1.json";
 import pointData from "../../data/point-test.json";
 import roadData from "../../data/test-line.json";
 
-function Map() {
+function Map({ selectedLayers }) {
   const position = [27.262638, 87.268971];
-  // const [roadsData, setRoadsData] = useState(null);
-  // const mapref = useRef();
 
   const featureStyle = {
     weight: 2.5,
     color: "black",
     fillOpacity: 0,
   };
+
   const roadStyle = {
     weight: 2,
     color: "orange",
@@ -37,6 +35,7 @@ function Map() {
       District ID: ${districtid}
     `);
   };
+
   const onEachRoad = (roadData, layer) => {
     const { name, type, speed_limit, access, condition } = roadData.properties;
     layer.bindPopup(`
@@ -57,21 +56,16 @@ function Map() {
     `);
   };
 
-  // useEffect(() => {
-  //   fetch("/public/data/hotosm_npl_roads_lines_geojson.json")
-  //     .then((res) => res.json())
-  //     .then((data) => setRoadsData(data))
-  //     .catch((err) => console.error("Error Loading GeoJSON", err));
-  // }, []);
+  const getFilteredPoints = (parkName) => ({
+    type: "FeatureCollection",
+    features: pointData.features.filter(
+      (feature) => feature.properties.name === parkName
+    ),
+  });
 
   return (
     <div className="map-area">
-      <MapContainer
-        center={position}
-        zoom={8}
-        className="map"
-        // ref={mapref}
-      >
+      <MapContainer center={position} zoom={8} className="map">
         <LayersControl>
           <LayersControl.Overlay checked name="OpenStreetMap">
             <TileLayer
@@ -90,13 +84,35 @@ function Map() {
           </LayersControl.Overlay>
         </LayersControl>
 
-        <GeoJSON
-          data={features}
-          style={featureStyle}
-          onEachFeature={onEachFeature}
-        />
-        <GeoJSON data={pointData} onEachFeature={onEachPointer} />
-        <GeoJSON data={roadData} style={roadStyle} onEachFeature={onEachRoad} />
+        {selectedLayers.includes("district") && (
+          <GeoJSON
+            data={features}
+            style={featureStyle}
+            onEachFeature={onEachFeature}
+          />
+        )}
+
+        {selectedLayers.includes("roads") && (
+          <GeoJSON
+            data={roadData}
+            style={roadStyle}
+            onEachFeature={onEachRoad}
+          />
+        )}
+
+        {selectedLayers.includes("sagarmatha") && (
+          <GeoJSON
+            data={getFilteredPoints("Sagarmatha National Park")}
+            onEachFeature={onEachPointer}
+          />
+        )}
+
+        {selectedLayers.includes("makalu") && (
+          <GeoJSON
+            data={getFilteredPoints("Makalu Barun National Park")}
+            onEachFeature={onEachPointer}
+          />
+        )}
       </MapContainer>
     </div>
   );

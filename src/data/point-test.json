@@ -1,1 +1,30 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Makalu Barun National Park","established_date":1978,"activities":"trekking"},"geometry":{"coordinates":[87.07226889537242,27.728151270896333],"type":"Point"},"id":0},{"type":"Feature","properties":{"name":"Sagarmatha National Park","established_date":1989,"activities":"trekking"},"geometry":{"coordinates":[86.71993005684584,27.93324840123185],"type":"Point"}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Makalu Barun National Park",
+        "established_date": 1978,
+        "activities": "trekking"
+      },
+      "geometry": {
+        "coordinates": [87.07226889537242, 27.728151270896333],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sagarmatha National Park",
+        "established_date": 1989,
+        "activities": "trekking"
+      },
+      "geometry": {
+        "coordinates": [86.71993005684584, 27.93324840123185],
+        "type": "Point"
+      }
+    }
+  ]
+}

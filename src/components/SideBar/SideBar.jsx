@@ -25,11 +25,20 @@ const menuData = [
   },
 ];
 
-function SideBar() {
+function SideBar({ selectedLayers, setSelectedLayers }) {
   const [openSection, setOpenSection] = useState(null);
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setSelectedLayers((prev) => [...prev, value]);
+    } else {
+      setSelectedLayers((prev) => prev.filter((item) => item !== value));
+    }
   };
 
   return (
@@ -46,7 +55,13 @@ function SideBar() {
                 {items.map(({ name, value, label }) => (
                   <li key={value}>
                     <label className="checkbox-text">
-                      <input type="checkbox" name={name} value={value} />{" "}
+                      <input
+                        type="checkbox"
+                        name={name}
+                        value={value}
+                        checked={selectedLayers.includes(value)}
+                        onChange={handleCheckboxChange}
+                      />{" "}
                       {label}
                     </label>
                   </li>
